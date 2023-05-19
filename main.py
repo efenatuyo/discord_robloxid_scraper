@@ -10,7 +10,7 @@ class discordBot:
         self.key = self.config.get('key')
         self.prefix = self.config.get('prefix')
         self.token = self.config.get('token')
-        assert self.key or self.prefix or self.token, "Key or Prefix or Token couldn't be found"
+        assert self.key and self.prefix and self.token, "Key or Prefix or Token couldn't be found"
 
     @property
     def _config(self):
